@@ -23,3 +23,16 @@ Route::get('say/{name?}',['as'=>'hello.name',function($name='Everybody'){
    return'Hello,'.$name;
 }]);
 
+Route::get('dashboard',function(){
+    return 'dashboard';
+});
+// http://localhost:8888/dashboard
+
+Route::group(['prefix'=>'admin'],function(){
+    Route::get('dashboard',function(){
+        return 'admindashboard';
+    });
+});
+
+//http://localhost:8888/admin/dashboard
+
