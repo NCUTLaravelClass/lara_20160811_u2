@@ -12,14 +12,14 @@
 */
 
 Route::get('/', function () {
-    return redirect('welcome');
+    return view('welcome');
 });
 
 Route::get('/welcome', function () {
     return ('welcome');
 });
 
-Route::get('hello/{name?}',['as'=>'hello.name',function($name='Everybody'){
+Route::get('say/{name?}',['as'=>'hello.name',function($name='Everybody'){
    return'Hello,'.$name;
 }]);
 
