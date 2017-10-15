@@ -19,7 +19,7 @@ Route::get('/welcome', function () {
     return ('welcome');
 });
 
-Route::get('hello/{name?}',function($name='Everybody'){
+Route::get('hello/{name?}',['as'=>'hello.name',function($name='Everybody'){
    return'Hello,'.$name;
-});
+}]);
 
