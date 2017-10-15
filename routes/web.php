@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Route::get('/welcome', function () {
     return ('welcome');
@@ -35,4 +35,7 @@ Route::group(['prefix'=>'admin'],function(){
 });
 
 //http://localhost:8888/admin/dashboard
+
+Route::get('/',['as'=>'home.index','uses'=>'HomeController@index']);
+
 
